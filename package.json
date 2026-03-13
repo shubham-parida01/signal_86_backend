@@ -1,0 +1,23 @@
+{
+  "name": "signal86-backend",
+  "version": "1.0.0",
+  "description": "Signal 86 realtime game backend",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "knex": "^3.1.0",
+    "nanoid": "^5.1.6",
+    "pg": "^8.20.0",
+    "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
+

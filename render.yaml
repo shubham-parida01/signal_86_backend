@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: signal86-backend
+    env: node
+    plan: free
+    region: oregon
+
+    buildCommand: |
+      npm install
+      npx knex migrate:latest
+
+    startCommand: npm start
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+
