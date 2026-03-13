@@ -19,7 +19,9 @@ const {
 
 const app = express();
 app.get("/health", (req, res) => res.json({ ok: true }));
-
+app.head("/",(req,res)=>{
+res.status(200).end()
+})
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
   cors: { origin: "*" },
