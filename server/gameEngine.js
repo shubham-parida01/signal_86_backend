@@ -269,6 +269,7 @@ function handleLocationUpdate(io, roomState, player, payload) {
     timestamp: typeof timestamp === "number" ? timestamp : null,
     receivedAtMs: now,
   };
+  broadcastRadar(io, roomState);
 
   const demo = getDemogorgon(roomState);
   if (!demo || !demo.last) return;
